@@ -42,6 +42,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-mono);
+  text-align: center;
 }
 
 p {
@@ -53,7 +54,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem; /* gap-6 = 24px = 1.5rem */
-  height: 100vh; /* h-screen */
-  padding: 1rem; /* p-4 = 16px = 1rem */
+  gap: 1.5rem;
+  height: 100vh;
+  padding: 1rem;
 }
