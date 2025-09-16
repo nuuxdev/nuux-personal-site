@@ -3,11 +3,11 @@ export default function Home() {
     <div className="container">
       <h1>NuuX&apos;s Personal Site</h1>
       <p style={{ textAlign: "center", maxWidth: "40rem" }}>
-        This is my personal site. Yes, it&apos;s empty,😆 BUT it&apos;s a work
+        This is my personal site. Yes, there&apos;s not much to see,😆 BUT it&apos;s a work
         in progress. <br /> U know what makes it different from my other
-        portfolio sites? <br /> It&apos;s not empty. <br />
-        It&apos;s out there. <br />
-        And it is Goddamn resposive 😎
+        portfolio projects? <br /> It&apos;s not empty. <br />
+        It&apos;s out there... damn right <br />
+        And it is Goddamn responsive 😎
         <br />
         And that&apos;s the point.
       </p>
