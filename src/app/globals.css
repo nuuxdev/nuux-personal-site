@@ -63,6 +63,13 @@ header > .nav_container {
   align-items: center;
 }
 
+.x_img_container {
+  img {
+    height: 1rem;
+    scale: 2;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;

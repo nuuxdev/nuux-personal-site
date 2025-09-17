@@ -32,7 +32,12 @@ export default function Header() {
   return (
     <header>
       <div className="nav_container">
-        <h3>NuuX</h3>
+        <h3>
+          Nuu
+          <span className="x_img_container">
+            <img src="/favicon.ico" alt="X" />
+          </span>
+        </h3>
         <button onClick={() => setDarkMode(!darkMode)}>
           light-dark&#40;&#41;
         </button>
