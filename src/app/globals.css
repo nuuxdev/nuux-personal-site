@@ -49,10 +49,11 @@ header {
   position: absolute;
   inset: 0;
   height: fit-content;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: blue;
 }
 
 header > .nav_container {
@@ -60,6 +61,7 @@ header > .nav_container {
   width: min(700px, 100%);
   justify-content: space-between;
   align-items: center;
+  background: red;
 }
 
 .container {
