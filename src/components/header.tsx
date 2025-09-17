@@ -21,11 +21,13 @@ export default function Header() {
     localStorage.setItem("nuux-user-mode", darkMode ? "dark" : "light");
   }, [darkMode]);
   return (
-    <header className="dark">
+    <header>
+     <div className="nav_container">
       <h3>NuuX</h3>
       <button onClick={() => setDarkMode(!darkMode)}>
         light-dark&#40;&#41;
       </button>
+     </div>
     </header>
   );
 }
