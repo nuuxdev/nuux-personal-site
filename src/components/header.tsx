@@ -35,7 +35,7 @@ export default function Header() {
         <h3>
           Nuu
           <span className="x_img_container">
-            <img src="/favicon.ico" alt="X" />
+            <img src="/nuux-logo.svg" alt="X" />
           </span>
         </h3>
         <button onClick={() => setDarkMode(!darkMode)}>
