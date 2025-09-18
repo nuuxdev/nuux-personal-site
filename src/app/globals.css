@@ -90,6 +90,12 @@ header > .nav_container {
   scale: 0.8;
 }
 
+#celestial_rays,
+#celestial_base {
+  transition: all 0.5s ease-in-out 0.2s,
+    fill 0.3s cubic-bezier(1, 0.24, 0.83, 0.67);
+}
+
 #celestial_rays {
   fill: color-mix(in oklch, var(--background), transparent 100%);
   r: var(--rays-radius);
