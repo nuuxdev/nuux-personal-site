@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState<boolean>();
+  const [hoverSupported, setHoverSupported] = UseState<boolean>(false)  
   const modeChangeTlRef = useRef<gsap.core.Timeline | null>(null);
   const hoverTlRef = useRef<gsap.core.Timeline | null>(null);
   useGSAP(() => {
@@ -32,6 +33,9 @@ export default function Header() {
         0
       );
   });
+  useEffect(()=> {
+     setHoverSupported(window.matchMedia("(hover: hover)").matches());
+  })
   useEffect(() => {
     let resolvedTheme: "dark" | "light";
 
@@ -79,8 +83,8 @@ export default function Header() {
             modeChangeTlRef.current?.reverse();
             setDarkMode(!darkMode);
           }}
-          onMouseEnter={() => hoverTlRef.current?.play()}
-          onMouseLeave={() => hoverTlRef.current?.reverse()}
+          onMouseEnter={() => hoverSupported && hoverTlRef.current?.play()}
+          onMouseLeave={() => hoverSupported && hoverTlRef.current?.reverse()}
         >
           <svg width="36" height="36" viewBox="0 0 36 36">
             <circle id="celestial_base" cx="18" cy="18" />
