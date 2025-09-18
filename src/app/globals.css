@@ -85,7 +85,8 @@ header > .nav_container {
   padding: 0.1rem;
 }
 .icon_button > svg {
-  --radius: 14;
+  --rays-radius: 14;
+  --base-radius: 8;
   scale: 0.8;
 }
 
@@ -97,29 +98,31 @@ header > .nav_container {
 
 #celestial_rays {
   fill: color-mix(in oklch, var(--background), transparent 100%);
-  r: var(--radius);
+  r: var(--rays-radius);
   stroke: var(--primary-color);
   stroke-width: 4;
-  stroke-dasharray: 0 calc((var(--radius) * 2 * pi) / 8);
+  stroke-dasharray: 0 calc((var(--rays-radius) * 2 * pi) / 8);
   stroke-linecap: round;
 }
 #celestial_base {
   fill: var(--primary-color);
-  r: 8;
+  r: var(--base-radius);
 }
 
 .icon_button:hover {
-  #celestial_rays {
-    transition-delay: 0s;
-    --radius: 13;
-  }
-  #celestial_base {
-    transition-delay: 0s;
-    r: 8;
+  @media (hover: hover) and (pointer: fine) {
+    #celestial_rays {
+      transition-delay: 0s;
+      --rays-radius: 12;
+    }
+    #celestial_base {
+      transition-delay: 0s;
+      --base-radius: 6;
+    }
   }
 }
 
-.icon_button:focus {
+.icon_button.dark_mode {
   #celestial_rays {
     fill: var(--background);
     stroke-width: 0px;
@@ -128,7 +131,7 @@ header > .nav_container {
     cy: 12;
   }
   #celestial_base {
-    r: var(--radius);
+    --base-radius: var(--rays-radius);
   }
 }
 
