@@ -1,70 +1,42 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState<boolean>();
-  const [hoverSupported, setHoverSupported] = UseState<boolean>(false)  
-  const modeChangeTlRef = useRef<gsap.core.Timeline | null>(null);
-  const hoverTlRef = useRef<gsap.core.Timeline | null>(null);
-  useGSAP(() => {
-    modeChangeTlRef.current = gsap
-      .timeline({ paused: true })
-      .to("#celestial_rays", {
-        fill: "var(--background)",
-        strokeWidth: 0,
-        strokeDasharray: "40px 0px",
-        cx: 26,
-        cy: 12,
-      })
-      .to(
-        "#celestial_base",
-        {
-          r: 14,
-        },
-        "<"
-      );
-    hoverTlRef.current = gsap
-      .timeline({ paused: true })
-      .to(
-        "#celestial_rays",
-        { "--radius": 12, duration: 0.3, ease: "power1.out" },
-        0
-      );
-  });
-  useEffect(()=> {
-     setHoverSupported(window.matchMedia("(hover: hover)").matches());
-  })
+  const modeChangeRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     let resolvedTheme: "dark" | "light";
-
-    if (darkMode === undefined) {
-      const cookieValue = document.cookie
-        .split(";")
-        .map((c) => c.trimStart())
-        .find((c) => c.startsWith("nuux-user-mode="))
-        ?.split("=")[1];
-      if (cookieValue) {
-        modeChangeTlRef.current?.reversed(cookieValue !== "dark");
-        modeChangeTlRef.current?.progress(cookieValue === "dark" ? 1 : 0);
-        resolvedTheme = cookieValue as "dark" | "light";
-      } else {
-        resolvedTheme = window.matchMedia("(prefers-color-scheme: dark)")
-          .matches
-          ? "dark"
-          : "light";
-        modeChangeTlRef.current?.reversed(resolvedTheme !== "dark");
-        modeChangeTlRef.current?.progress(resolvedTheme === "dark" ? 1 : 0);
-      }
-      setDarkMode(resolvedTheme === "dark");
+    const cookieValue = document.cookie
+      .split(";")
+      .map((c) => c.trimStart())
+      .find((c) => c.startsWith("nuux-user-mode="))
+      ?.split("=")[1];
+    if (cookieValue) {
+      resolvedTheme = cookieValue as "dark" | "light";
     } else {
-      modeChangeTlRef.current?.reversed(!darkMode);
-      resolvedTheme = darkMode ? "dark" : "light";
+      resolvedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
     }
+    setDarkMode(resolvedTheme === "dark");
     document.cookie = `nuux-user-mode=${resolvedTheme}; path=/; max-age=31536000`;
     document.documentElement.setAttribute("data-theme", resolvedTheme);
-  }, [darkMode]);
+
+    if (resolvedTheme === "dark")
+      modeChangeRef.current?.classList.add("dark_mode");
+  }, []);
+
+  const handleModeChange = () => {
+    const newTheme = darkMode ? "light" : "dark";
+    document.cookie = `nuux-user-mode=${newTheme}; path=/; max-age=31536000`;
+    document.documentElement.setAttribute("data-theme", newTheme);
+    setDarkMode(!darkMode);
+    if (modeChangeRef !== null) {
+      if (darkMode) modeChangeRef.current?.classList.remove("dark_mode");
+      else modeChangeRef.current?.classList.add("dark_mode");
+    }
+  };
+
 
   return (
     <header>
@@ -76,15 +48,9 @@ export default function Header() {
           </span>
         </h3>
         <button
+          ref={modeChangeRef}
           className="icon_button"
-          onClick={() => {
-            console.log(modeChangeTlRef.current?.reversed());
-            console.log(modeChangeTlRef.current?.progress());
-            modeChangeTlRef.current?.reverse();
-            setDarkMode(!darkMode);
-          }}
-          onMouseEnter={() => hoverSupported && hoverTlRef.current?.play()}
-          onMouseLeave={() => hoverSupported && hoverTlRef.current?.reverse()}
+          onClick={handleModeChange}
         >
           <svg width="36" height="36" viewBox="0 0 36 36">
             <circle id="celestial_base" cx="18" cy="18" />
