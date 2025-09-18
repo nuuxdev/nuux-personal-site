@@ -19,6 +19,7 @@ export default function Header() {
         : "light";
     }
     setDarkMode(resolvedTheme === "dark");
+
     document.cookie = `nuux-user-mode=${resolvedTheme}; path=/; max-age=31536000`;
     document.documentElement.setAttribute("data-theme", resolvedTheme);
 
