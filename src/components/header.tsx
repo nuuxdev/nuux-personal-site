@@ -29,6 +29,16 @@ export default function Header() {
     document.documentElement.setAttribute("data-theme", resolvedTheme);
   }, [darkMode]);
 
+  const handleModeChange = () => {
+    setDarkMode(!darkMode);
+    // const celestial_rays = document.getElementById("celestial_rays");
+    // const celestial_base = document.getElementById("celestial_base");
+    // if (celestial_rays && celestial_base) {
+    //   celestial_rays.setAttribute("r", "12");
+    //   celestial_base.setAttribute("r", "8");
+    // }
+  };
+
   return (
     <header>
       <div className="nav_container">
@@ -38,8 +48,11 @@ export default function Header() {
             <img src="/nuux-logo.svg" alt="X" />
           </span>
         </h3>
-        <button onClick={() => setDarkMode(!darkMode)}>
-          light-dark&#40;&#41;
+        <button className="icon_button" onClick={handleModeChange}>
+          <svg width="36" height="36" viewBox="0 0 36 36">
+            <circle id="celestial_base" cx="18" cy="18" />
+            <circle id="celestial_rays" cx="18" cy="18" />
+          </svg>
         </button>
       </div>
     </header>

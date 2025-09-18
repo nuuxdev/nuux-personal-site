@@ -10,6 +10,10 @@
   color-scheme: light dark;
   --background: light-dark(#ededed, #171717);
   --foreground: light-dark(#171717, #ededed);
+  --primary-color: light-dark(
+    oklch(0.5912 0.1222 166.29),
+    oklch(0.6187 0.1222 166.29)
+  );
 }
 
 html[data-theme="light"] {
@@ -29,6 +33,10 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+span {
+  color: var(--primary-color);
 }
 
 h1,
@@ -67,6 +75,60 @@ header > .nav_container {
   img {
     height: 1rem;
     scale: 2;
+  }
+}
+
+.icon_button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: 0.1rem;
+}
+.icon_button > svg {
+  --radius: 14;
+  scale: 0.8;
+}
+
+#celestial_rays,
+#celestial_base {
+  transition: all 0.5s ease-in-out 0.2s,
+    fill 0.3s cubic-bezier(1, 0.24, 0.83, 0.67);
+}
+
+#celestial_rays {
+  fill: color-mix(in oklch, var(--background), transparent 100%);
+  r: var(--radius);
+  stroke: var(--primary-color);
+  stroke-width: 4;
+  stroke-dasharray: 0 calc((var(--radius) * 2 * pi) / 8);
+  stroke-linecap: round;
+}
+#celestial_base {
+  fill: var(--primary-color);
+  r: 8;
+}
+
+.icon_button:hover {
+  #celestial_rays {
+    transition-delay: 0s;
+    --radius: 13;
+  }
+  #celestial_base {
+    transition-delay: 0s;
+    r: 8;
+  }
+}
+
+.icon_button:focus {
+  #celestial_rays {
+    fill: var(--background);
+    stroke-width: 0px;
+    stroke-dasharray: 40px 0px;
+    cx: 26;
+    cy: 12;
+  }
+  #celestial_base {
+    r: var(--radius);
   }
 }
 
