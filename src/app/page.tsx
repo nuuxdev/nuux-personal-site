@@ -6,7 +6,7 @@ export default function Home() {
       <Header />
       <div className="container">
         <h1>
-          <span>NuuX</span>&apos;s Personal Site
+          I am <span id="custom_emoji">NuuX🕶️</span>
         </h1>
         <p style={{ textAlign: "center", maxWidth: "40rem" }}>
           This is my personal site. Yes, there&apos;s not much to see,😆 BUT

@@ -144,3 +144,18 @@ header > .nav_container {
   height: 100vh;
   padding: 1rem;
 }
+#custom_emoji {
+  position: relative;
+  &::after {
+    content: "";
+    /* display: inline-block; */
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    z-index: -1;
+  }
+}
