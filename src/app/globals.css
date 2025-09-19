@@ -52,6 +52,10 @@ h6 {
   text-align: center;
 }
 
+p {
+  line-height: 1.6;
+}
+
 button {
   font-family: inherit;
   padding: 0.5em 1em;
@@ -140,27 +144,59 @@ header > .nav_container {
   }
 }
 
-.container {
+/* main */
+main {
+  --content-max-width: 70ch;
+  --breakout-max-padding: 4rem;
+  --padding-inline: 1rem;
+}
+
+.content_grid {
+  display: grid;
+  grid-template-columns:
+    [fullscreen-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(var(--padding-inline), var(--breakout-max-padding))
+    [content-start] min(
+      100% - 4 * var(--padding-inline),
+      var(--content-max-width)
+    )
+    [content-end] minmax(var(--padding-inline), var(--breakout-max-padding))
+    [breakout-end] minmax(var(--padding-inline), 1fr) [fullscreen-end];
+}
+.content_grid > * {
+  grid-column: content;
+}
+.content_grid > .breakout {
+  grid-column: breakout;
+}
+.content_grid > .fullscreen {
+  grid-column: fullscreen;
+}
+
+/* section {
+  background-color: red;
+} */
+
+/* hero section */
+.hero_section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  gap: 1.5rem;
-  height: 100vh;
-  padding: 1rem;
+  gap: 1rem;
 }
 #custom_emoji {
   position: relative;
   &::after {
     content: "";
-    /* display: inline-block; */
     width: 2rem;
     height: 2rem;
     background-color: var(--primary-color);
     border-radius: 50%;
     position: absolute;
     right: 0;
-    bottom: 5%;
+    bottom: 10%;
     z-index: -1;
   }
 }
