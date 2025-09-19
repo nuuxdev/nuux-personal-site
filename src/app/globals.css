@@ -16,6 +16,9 @@
   );
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html[data-theme="light"] {
   color-scheme: light;
 }
@@ -51,6 +54,8 @@ h6 {
 
 button {
   font-family: inherit;
+  padding: 0.5em 1em;
+  font-size: 1rem;
 }
 
 /* header */
@@ -158,4 +163,9 @@ header > .nav_container {
     bottom: 5%;
     z-index: -1;
   }
+}
+
+.button_icon_emoji {
+  vertical-align: middle;
+  font-size: 1.5rem;
 }

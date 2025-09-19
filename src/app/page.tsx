@@ -1,10 +1,11 @@
 import Header from "@/components/header";
+import ProjectsButton from "@/components/projectsButton";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <div className="container">
+      <section className="container">
         <h1>
           I am <span id="custom_emoji">NuuX🕶️</span>
         </h1>
@@ -21,7 +22,17 @@ export default function Home() {
           <span>NB</span>: It will be different next time you visit. Promise.
           Await. But not All 😁
         </h3>
-      </div>
+        <ProjectsButton />
+      </section>
+      <section id="projects" style={{ height: "200vh" }}>
+        <h1>Projects</h1>
+        <p style={{ textAlign: "center" }}>
+          My Amazing Projects will be listed here
+        </p>
+        <h3>
+          <span>Soon</span>😁
+        </h3>
+      </section>
     </>
   );
 }
