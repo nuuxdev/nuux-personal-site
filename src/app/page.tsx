@@ -66,8 +66,9 @@ export default function Home() {
             My Amazing Projects will be listed here
           </p>
           <h3>
-            <span>Soon</span>😁
+            <span>Mobile</span>😁
           </h3>
+          <div className="mobile_projects_bg" />
         </section>
         <section id="another" style={{ height: "100vh" }}>
           <h1>Another</h1>

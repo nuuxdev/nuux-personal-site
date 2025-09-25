@@ -272,6 +272,18 @@ main {
   }
 }
 
+/* projects section */
+.mobile_projects_bg {
+  width: 320px;
+  aspect-ratio: 1/2.12;
+  background-image: light-dark(
+    url("/projects/bg-mobile-light.png"),
+    url("/projects/bg-mobile-dark.png")
+  );
+  background-size: cover;
+  margin-inline: auto;
+}
+
 /* footer */
 
 footer {
