@@ -283,11 +283,12 @@ section#projects {
 .mobile_projects_bg::after {
   aspect-ratio: 1/2.12;
   background-size: cover;
+  transition: background-image var(--mode-transition);
 }
 
 .mobile_projects_bg {
   position: relative;
-  width: 320px;
+  width: 250px;
   background-image: light-dark(
     url("/projects/bg-mobile-light.webp"),
     url("/projects/bg-mobile-dark.webp")
