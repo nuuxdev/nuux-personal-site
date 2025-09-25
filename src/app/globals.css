@@ -66,14 +66,15 @@ button {
 /* header */
 header {
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   inset: 0;
   height: fit-content;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: color-mix(in oklch, var(--background), transparent 10%);
+  backdrop-filter: blur(1rem);
   transition: var(--mode-transition);
 }
 
