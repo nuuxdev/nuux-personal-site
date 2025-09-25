@@ -273,15 +273,56 @@ main {
 }
 
 /* projects section */
-.mobile_projects_bg {
-  width: 320px;
+
+section#projects {
+  min-height: 100vh;
+}
+.mobile_projects_bg,
+.mobile_projects_bg::before,
+.mobile_projects_bg::after {
   aspect-ratio: 1/2.12;
+  background-size: cover;
+}
+
+.mobile_projects_bg {
+  position: relative;
+  width: 320px;
   background-image: light-dark(
     url("/projects/bg-mobile-light.webp"),
     url("/projects/bg-mobile-dark.webp")
   );
-  background-size: cover;
   margin-inline: auto;
+}
+
+.mobile_projects_bg::before,
+.mobile_projects_bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  z-index: -1;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile_projects_bg::before {
+  left: -30%;
+  background-image: light-dark(
+    url("/projects/nova-erp-one.webp"),
+    url("/projects/nova-expense-one.webp")
+  );
+  rotate: -20deg;
+  transform-origin: left bottom;
+}
+.mobile_projects_bg::after {
+  right: -30%;
+  background-image: light-dark(
+    url("/projects/nova-erp-two.webp"),
+    url("/projects/nova-expense-two.webp")
+  );
+  rotate: 20deg;
+  transform-origin: right bottom;
 }
 
 /* footer */

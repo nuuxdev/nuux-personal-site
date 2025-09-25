@@ -56,11 +56,7 @@ export default function Home() {
             />
           </svg>
         </section>
-        <section
-          id="projects"
-          className="fullscreen"
-          style={{ height: "100vh" }}
-        >
+        <section id="projects" className="fullscreen">
           <h1>Projects</h1>
           <p style={{ textAlign: "center" }}>
             My Amazing Projects will be listed here
