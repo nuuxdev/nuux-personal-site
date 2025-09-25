@@ -277,8 +277,8 @@ main {
   width: 320px;
   aspect-ratio: 1/2.12;
   background-image: light-dark(
-    url("/projects/bg-mobile-light.png"),
-    url("/projects/bg-mobile-dark.png")
+    url("/projects/bg-mobile-light.webp"),
+    url("/projects/bg-mobile-dark.webp")
   );
   background-size: cover;
   margin-inline: auto;
