@@ -246,7 +246,10 @@ main {
 }
 
 .gradient {
-  animation: color_change 10s linear infinite;
+  animation: color_change 7s linear infinite;
+}
+.offset_path {
+  animation: opacity_change 7s linear infinite;
 }
 
 .gradient.start {
@@ -261,5 +264,10 @@ main {
   50% {
     --_start_color: oklch(0.5912 0.1222 166.29 / 0);
     --_end_color: oklch(0.5912 0.1222 166.29 / 1);
+  }
+}
+@keyframes opacity_change {
+  50% {
+    opacity: 0;
   }
 }
