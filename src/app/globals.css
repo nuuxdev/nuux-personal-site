@@ -303,7 +303,7 @@ footer {
   gap: 2rem;
   padding: 1rem 3rem;
   border-radius: 100vw;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: 4px solid light-dark(#00000010, #ffffff10);
   backdrop-filter: blur(0.3rem);
 }
@@ -312,7 +312,8 @@ footer {
   width: 1.5rem;
   aspect-ratio: 1/1;
   --_invert: light-dark(0%, 100%);
-  filter: invert(var(--_invert));
+  filter: invert(var(--_invert)) drop-shadow(0 0 0.5px white)
+    drop-shadow(0 0 0.5px black);
 }
 #rick_roll_icon {
   filter: none;
