@@ -78,6 +78,16 @@ export default function Home() {
             <span>Soon</span>😁
           </h3>
         </section>
+        <footer>
+          <div className="socials_wrapper">
+            <Link href="https://github.com/nuuxdev" target="_blank">
+              <img src="/socials/github.png" alt="github" />
+            </Link>
+            <Link href="https://linkedin.com/in/nuuxdev" target="_blank">
+              <img src="/socials/linkedin.png" alt="linkedin" />
+            </Link>
+          </div>
+        </footer>
       </main>
     </>
   );

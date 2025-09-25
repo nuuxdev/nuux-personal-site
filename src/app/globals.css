@@ -271,3 +271,20 @@ main {
     opacity: 0;
   }
 }
+
+/* footer */
+
+.socials_wrapper {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.socials_wrapper img {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  --_invert: light-dark(0%, 100%);
+  filter: invert(var(--_invert));
+}
