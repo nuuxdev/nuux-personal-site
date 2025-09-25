@@ -152,6 +152,8 @@ main {
   --content-max-width: 70ch;
   --breakout-max-padding: 4rem;
   --padding-inline: 1rem;
+  /* position: relative; */
+  /* overflow-x: clip; for the svg */
 }
 
 .content_grid {
@@ -207,4 +209,57 @@ main {
 .button_icon_emoji {
   vertical-align: middle;
   font-size: 1.5rem;
+}
+
+.hero_svg {
+  position: fixed;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  width: max(120%, 1600px);
+  rotate: -10deg;
+  aspect-ratio: 428/120;
+  z-index: -1;
+  filter: drop-shadow(0 -0.75rem 0.5rem var(--primary-color));
+  path {
+    stroke-width: 0.5;
+  }
+  .offset_path {
+    stroke-width: 1;
+    stroke: var(--primary-color);
+    z-index: -2;
+    filter: blur(0.5rem);
+    transform: translateY(-0.7rem);
+  }
+}
+
+@property --_start_color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: oklch(0.5912 0.1222 166.29 / 1);
+}
+
+@property --_end_color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: oklch(0.5912 0.1222 166.29 / 0);
+}
+
+.gradient {
+  animation: color_change 10s linear infinite;
+}
+
+.gradient.start {
+  stop-color: var(--_start_color);
+}
+
+.gradient.end {
+  stop-color: var(--_end_color);
+}
+
+@keyframes color_change {
+  50% {
+    --_start_color: oklch(0.5912 0.1222 166.29 / 0);
+    --_end_color: oklch(0.5912 0.1222 166.29 / 1);
+  }
 }
