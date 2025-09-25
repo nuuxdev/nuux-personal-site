@@ -86,6 +86,16 @@ export default function Home() {
             <Link href="https://linkedin.com/in/nuuxdev" target="_blank">
               <img src="/socials/linkedin.png" alt="linkedin" />
             </Link>
+            <Link
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+            >
+              <img
+                id="rick_roll_icon"
+                src="/socials/youtube.png"
+                alt="youtube"
+              />
+            </Link>
           </div>
         </footer>
       </main>

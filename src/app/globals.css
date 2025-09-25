@@ -274,8 +274,15 @@ main {
 
 /* footer */
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .socials_wrapper {
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,4 +294,15 @@ main {
   aspect-ratio: 1/1;
   --_invert: light-dark(0%, 100%);
   filter: invert(var(--_invert));
+}
+#rick_roll_icon {
+  filter: none;
+  width: 3rem;
+  height: 2rem;
+  animation: beat 2s infinite;
+}
+@keyframes beat {
+  50% {
+    transform: scale(1.2);
+  }
 }
