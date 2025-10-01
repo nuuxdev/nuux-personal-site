@@ -64,7 +64,28 @@ export default function Home() {
           <h3>
             <span>Mobile</span>😁
           </h3>
-          <div className="mobile_projects_bg" />
+          <div className="mobile_projects_container">
+            <figure className="mobile_projects">
+              <img src="/projects/bg-mobile-light.webp" alt="project name" />
+              <figcaption>Project One</figcaption>
+            </figure>
+            <figure className="mobile_projects">
+              <img src="/projects/bg-mobile-light.webp" alt="project name" />
+              <figcaption>Project Two</figcaption>
+            </figure>
+            <figure className="mobile_projects">
+              <img src="/projects/bg-mobile-light.webp" alt="project name" />
+              <figcaption>Project Three</figcaption>
+            </figure>
+            <figure className="mobile_projects">
+              <img src="/projects/bg-mobile-light.webp" alt="project name" />
+              <figcaption>Project Four</figcaption>
+            </figure>
+            <figure className="mobile_projects">
+              <img src="/projects/bg-mobile-light.webp" alt="project name" />
+              <figcaption>Project Five</figcaption>
+            </figure>
+          </div>
         </section>
         <section id="another" style={{ height: "100vh" }}>
           <h1>Another</h1>

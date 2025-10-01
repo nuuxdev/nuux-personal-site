@@ -278,7 +278,7 @@ main {
 section#projects {
   min-height: 100vh;
 }
-.mobile_projects_bg,
+/* .mobile_projects_bg,
 .mobile_projects_bg::before,
 .mobile_projects_bg::after {
   aspect-ratio: 1/2.12;
@@ -294,37 +294,71 @@ section#projects {
     url("/projects/bg-mobile-dark.webp")
   );
   margin-inline: auto;
-}
-
-.mobile_projects_bg::before,
-.mobile_projects_bg::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 75%;
-  z-index: -1;
+} */
+.mobile_projects_container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 5rem;
+  overflow-x: hidden;
   @media (max-width: 768px) {
-    display: none;
+    justify-content: start;
+    overflow-x: scroll;
+    gap: 0rem;
   }
-}
-
-.mobile_projects_bg::before {
-  left: -30%;
-  background-image: light-dark(
-    url("/projects/nova-erp-one.webp"),
-    url("/projects/nova-expense-one.webp")
-  );
-  rotate: -20deg;
-  transform-origin: left bottom;
-}
-.mobile_projects_bg::after {
-  right: -30%;
-  background-image: light-dark(
-    url("/projects/nova-erp-two.webp"),
-    url("/projects/nova-expense-two.webp")
-  );
-  rotate: 20deg;
-  transform-origin: right bottom;
+  --webkit-mask: linear-gradient(transparent, white);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  &:has(.mobile_projects:hover) .mobile_projects:not(:hover) img {
+    scale: 0.8;
+    opacity: 0.3;
+  }
+  .mobile_projects {
+    margin: 0;
+    transform-origin: bottom;
+    &:nth-child(1) {
+      transform: translateY(10%);
+      rotate: -10deg;
+    }
+    &:nth-child(5) {
+      transform: translateY(10%);
+      rotate: 10deg;
+    }
+    &:nth-child(2) {
+      transform: translateY(3%);
+      rotate: -5deg;
+    }
+    &:nth-child(4) {
+      transform: translateY(3%);
+      rotate: 5deg;
+    }
+    &:nth-child(1) img,
+    &:nth-child(5) img {
+      scale: 0.8;
+    }
+    &:nth-child(2) img,
+    &:nth-child(4) img {
+      scale: 0.9;
+    }
+    &:hover > img {
+      scale: 1;
+      opacity: 1;
+    }
+    &:has(+ :hover) img,
+    &:hover + & img {
+      opacity: 0.5 !important;
+      scale: 0.9 !important;
+    }
+    figcaption {
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+    img {
+      width: 240px;
+      transform-origin: bottom;
+      opacity: 0.9;
+      transition: scale 100ms ease-out, opacity 200ms ease-out;
+    }
+  }
 }
 
 /* footer */
