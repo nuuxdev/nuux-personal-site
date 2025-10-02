@@ -278,23 +278,6 @@ main {
 section#projects {
   min-height: 100vh;
 }
-/* .mobile_projects_bg,
-.mobile_projects_bg::before,
-.mobile_projects_bg::after {
-  aspect-ratio: 1/2.12;
-  background-size: cover;
-  transition: background-image var(--mode-transition);
-}
-
-.mobile_projects_bg {
-  position: relative;
-  width: 250px;
-  background-image: light-dark(
-    url("/projects/bg-mobile-light.webp"),
-    url("/projects/bg-mobile-dark.webp")
-  );
-  margin-inline: auto;
-} */
 .mobile_projects_container {
   display: flex;
   justify-content: center;
@@ -353,6 +336,10 @@ section#projects {
       font-family: var(--font-mono);
     }
     img {
+      content: light-dark(
+        url("/projects/bg-mobile-light.webp"),
+        url("/projects/bg-mobile-dark.webp")
+      );
       width: 240px;
       transform-origin: bottom;
       opacity: 0.9;
