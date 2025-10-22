@@ -192,8 +192,11 @@ main {
   flex-direction: column;
   /* align-items: center; */
   justify-content: start;
-  padding-top: 6rem;
   gap: 1rem;
+  padding-top: 6rem;
+  @media (max-width: 600px) {
+    padding-top: 2rem;
+  }
 }
 #custom_emoji {
   position: relative;
