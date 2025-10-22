@@ -1,4 +1,11 @@
 import Link from "next/link";
+import {
+  CssIcon,
+  FigmaIcon,
+  ReactIcon,
+  TypescriptIcon,
+  VueIcon,
+} from "./ToolIcons";
 
 export default function HeroSection() {
   return (
@@ -7,15 +14,28 @@ export default function HeroSection() {
         I am <span id="custom_emoji">NuuX🕶️</span>
       </h1>
       <p style={{ textAlign: "center" }}>
-        This is my personal site. Yes, there&apos;s not much to see,😆 BUT
-        it&apos;s a work in progress. U know what makes it different from my
-        other portfolio projects? It&apos;s not empty. It&apos;s out there...
-        damn right And it is Goddamn responsive 😎 And that&apos;s the point.
+        a computer science graduate 🎓
+        <br />
+        lover and hater of CSS 💘
+        <br />
+        fallen nerd, in the deep sea of creative web development 🤓
+        <br />
       </p>
-      <h3>
-        <span>NB</span>: It will be different next time you visit. Promise.
-        Await. But not All 😁
-      </h3>
+
+      <div
+        style={{
+          display: "flex",
+          gap: "3rem",
+          justifyContent: "center",
+          marginBlock: "3rem",
+        }}
+      >
+        <FigmaIcon />
+        <ReactIcon />
+        <VueIcon />
+        <CssIcon />
+        <TypescriptIcon />
+      </div>
       <Link href="#projects" style={{ alignSelf: "center" }}>
         <button tabIndex={-1}>
           Straight to my projects <span className="button_icon_emoji">⛷️</span>
