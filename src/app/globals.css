@@ -291,8 +291,7 @@ section#projects {
   padding-block: 5rem;
   overflow-x: hidden;
   @media (max-width: 768px) {
-    justify-content: start;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 0rem;
   }
   --webkit-mask: linear-gradient(transparent, white);
@@ -340,16 +339,25 @@ section#projects {
     figcaption {
       text-align: center;
       font-family: var(--font-mono);
+      max-width: 15ch;
+      @media (max-width: 768px) {
+        font-size: 7px;
+      }
     }
     img {
+      --mobile-projects-width: 240px;
+      --title-width: calc(var(---mobile-projects-width)/2)
       content: light-dark(
         url("/projects/bg-mobile-light.webp"),
         url("/projects/bg-mobile-dark.webp")
       );
-      width: 240px;
       transform-origin: bottom;
       opacity: 0.9;
       transition: scale 100ms ease-out, opacity 200ms ease-out;
+      width: var(--mobile-projects-width);
+      @media (max-width: 768px) {
+        --mobile-projects-width: 80px;
+      }
     }
   }
 }

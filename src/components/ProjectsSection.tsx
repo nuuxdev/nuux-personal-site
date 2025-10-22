@@ -11,7 +11,7 @@ export default function ProjectsSection() {
       <div className="mobile_projects_container">
         <figure className="mobile_projects">
           <img src="/projects/bg-mobile-light.webp" alt="project name" />
-          <figcaption>Project One</figcaption>
+          <figcaption>Project One oveflowing</figcaption>
         </figure>
         <figure className="mobile_projects">
           <img src="/projects/bg-mobile-light.webp" alt="project name" />
