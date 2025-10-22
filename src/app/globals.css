@@ -61,21 +61,22 @@ button {
   font-family: inherit;
   padding: 0.5em 1em;
   font-size: 1rem;
+  /* transition: var(--mode-transition); */
 }
 
 /* header */
 header {
   z-index: 1000;
-  position: fixed;
-  inset: 0;
+  /* position: fixed; */
+  /* inset: 0; */
   height: fit-content;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: color-mix(in oklch, var(--background), transparent 10%);
-  backdrop-filter: blur(1rem);
-  transition: var(--mode-transition);
+  /* background-color: color-mix(in oklch, var(--background), transparent 10%); */
+  /* backdrop-filter: blur(1rem); */
+  /* transition: var(--mode-transition); */
 }
 
 header > .nav_container {
