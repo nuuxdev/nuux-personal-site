@@ -28,6 +28,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" data-theme={theme}>
+      <head>
+        <meta name="theme-color" content="#00946d" />
+      </head>
       <body
         className={`${martianMono.variable} ${geistSans.variable} antialiased`}
       >
