@@ -10,7 +10,7 @@ export default function Home() {
       <main className="content_grid">
         <HeroSection />
         <ProjectsSection />
-        <section id="another" style={{ height: "100vh" }}>
+        {/* <section id="another" style={{ height: "100vh" }}>
           <h1>Another</h1>
           <p style={{ textAlign: "center" }}>
             My Amazing another things will be listed here
@@ -18,7 +18,7 @@ export default function Home() {
           <h3>
             <span>Soon</span>😁
           </h3>
-        </section>
+        </section> */}
         <FooterSection />
       </main>
     </>

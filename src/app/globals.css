@@ -347,7 +347,7 @@ section#projects {
 
     a {
       display: block;
-      --title-width: calc(var(---mobile-projects-width)/2);
+      --title-width: calc(var(---mobile-projects-width) / 2);
       transform-origin: bottom;
       opacity: 0.9;
       transition: scale 100ms ease-out, opacity 200ms ease-out;
@@ -356,7 +356,6 @@ section#projects {
       @media (max-width: 768px) {
         --mobile-projects-width: 80px;
       }
-      
     }
     img {
       width: 100%;
@@ -364,8 +363,15 @@ section#projects {
         url("/projects/bg-mobile-light.webp"),
         url("/projects/bg-mobile-dark.webp")
       ); */
-      
     }
+  }
+}
+
+.web_projects_container {
+  display: grid;
+  place-items: center;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
