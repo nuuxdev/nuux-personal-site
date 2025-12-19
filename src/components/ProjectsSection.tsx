@@ -1,8 +1,6 @@
 import Link from "next/link";
 import {
   FigmaIcon,
-  ReactIcon,
-  VueIcon,
   CssIcon,
   TypescriptIcon,
 } from "./ToolIcons";
@@ -139,6 +137,32 @@ export default function ProjectsSection() {
             />
           </Link>
           <figcaption>Rome Beauty Spa System Design</figcaption>
+        </figure>
+        <figure className="web_projects" style={{ maxWidth: "40rem" }}>
+          <Link
+            target="blank"
+            href="https://emamaye-daycare.vercel.app"
+          >
+            <img
+              src="/projects/emamaye-daycare.webp"
+              alt="Emamaye Daycare Management System"
+              style={{ width: "100%" }}
+            />
+          </Link>
+          <figcaption>Emamaye Daycare Management System</figcaption>
+        </figure>
+        <figure className="web_projects" style={{ maxWidth: "40rem" }}>
+          <Link
+            target="blank"
+            href="https://wedding-invitation-nine-sage.vercel.app/k57amscyy8y0j65272nafs1vbd7x5abf"
+          >
+            <img
+              src="/projects/wedding-invitation.webp"
+              alt="Wedding Invitation and Management App"
+              style={{ width: "100%" }}
+            />
+          </Link>
+          <figcaption>Wedding Invitation and Management App</figcaption>
         </figure>
       </div>
     </section>
