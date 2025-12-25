@@ -42,7 +42,6 @@ export default function Header() {
     <header>
       <div className="nav_container">
         <h3>
-          Nuu
           <span className="x_img_container">
             <img src="/nuux-logo.svg" alt="X" />
           </span>

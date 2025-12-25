@@ -109,7 +109,7 @@ header>.nav_container {
 
 #celestial_rays,
 #celestial_base {
-  transition: all 0.5s ease-in-out, fill var(--mode-transition);
+  transition: all 0.4s ease-in-out, fill var(--mode-transition);
 }
 
 #celestial_rays {
@@ -206,11 +206,11 @@ main {
 
   &::after {
     content: "";
+    position: absolute;
     width: 2rem;
     height: 2rem;
     background-color: var(--primary-color);
     border-radius: 50%;
-    position: absolute;
     right: 0;
     bottom: 10%;
     z-index: -1;
@@ -238,7 +238,7 @@ main {
   }
 
   .offset_path {
-    stroke-width: 1;
+    stroke-width: 3;
     stroke: var(--primary-color);
     z-index: -2;
     filter: blur(0.5rem);
