@@ -154,7 +154,7 @@ export default function ProjectsSection() {
         <figure className="web_projects" style={{ maxWidth: "40rem" }}>
           <Link
             target="blank"
-            href="https://wedding-invitation-nine-sage.vercel.app/k57amscyy8y0j65272nafs1vbd7x5abf"
+            href="https://wedding-invitation-nine-sage.vercel.app/k57a4rtzvfhd3rq6ntenz8nexs80hrfm"
           >
             <img
               src="/projects/wedding-invitation.webp"
