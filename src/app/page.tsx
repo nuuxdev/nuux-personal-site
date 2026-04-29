@@ -6,10 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
   return (
     <>
-      <div className="header_footer_container">
-        <Header />
-        <FooterSection />
-      </div>
+      <Header />
       <main className="content_grid">
         <HeroSection />
         <ProjectsSection />
@@ -22,6 +19,7 @@ export default function Home() {
             <span>Soon</span>😁
           </h3>
         </section> */}
+        <FooterSection />
       </main>
     </>
   );
