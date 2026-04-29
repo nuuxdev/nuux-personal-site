@@ -64,8 +64,27 @@ button {
   /* transition: var(--mode-transition); */
 }
 
+@property --show-footer {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 1;
+}
+
+.header_footer_container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 9999 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  container-type: scroll-state;
+}
+
 /* header */
 header {
+  position: sticky;
+  top: 0;
   --max-header-height: 2rem;
   z-index: 1000;
   /* position: fixed; */
@@ -75,6 +94,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--mode-transition);
+
+  @container scroll-state(stuck:top) {
+    translate: 0 -100px;
+  }
+
   /* background-color: color-mix(in oklch, var(--background), transparent 10%); */
   /* backdrop-filter: blur(1rem); */
   /* transition: var(--mode-transition); */
@@ -154,8 +179,62 @@ header>.nav_container {
   }
 }
 
+/* footer */
+
+footer {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  translate: 0 100px;
+
+  transition: var(--mode-transition);
+
+  @container scroll-state(stuck:top) {
+    translate: 0 0;
+  }
+}
+
+.socials_wrapper {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  border-radius: 100vw;
+  background-color: transparent;
+  border: 4px solid light-dark(#00000010, #ffffff10);
+  backdrop-filter: blur(0.3rem);
+  opacity: var(--show-footer);
+}
+
+.socials_wrapper img {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  --_invert: light-dark(0%, 100%);
+  filter: invert(var(--_invert)) drop-shadow(0 0 0.5px white) drop-shadow(0 0 0.5px black);
+}
+
+#rick_roll_icon {
+  filter: none;
+  width: 2.25rem;
+  height: 1.5rem;
+  animation: beat 2s infinite;
+}
+
+@keyframes beat {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
 /* main */
 main {
+  position: relative;
+  top: -90vh;
+  /* accounting the space the sticky header footer container takes */
   --content-max-width: 70ch;
   --breakout-max-padding: 4rem;
   --padding-inline: 1rem;
@@ -399,49 +478,5 @@ section#projects {
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* footer */
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: grid;
-  place-content: center;
-  padding: 1rem;
-}
-
-.socials_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 3rem;
-  border-radius: 100vw;
-  /* background-color: transparent; */
-  border: 4px solid light-dark(#00000010, #ffffff10);
-  backdrop-filter: blur(0.3rem);
-}
-
-.socials_wrapper img {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  --_invert: light-dark(0%, 100%);
-  filter: invert(var(--_invert)) drop-shadow(0 0 0.5px white) drop-shadow(0 0 0.5px black);
-}
-
-#rick_roll_icon {
-  filter: none;
-  width: 2.25rem;
-  height: 1.5rem;
-  animation: beat 2s infinite;
-}
-
-@keyframes beat {
-  50% {
-    transform: scale(1.2);
   }
 }

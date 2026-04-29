@@ -164,6 +164,19 @@ export default function ProjectsSection() {
           </Link>
           <figcaption>Wedding Invitation and Management App</figcaption>
         </figure>
+        <figure className="web_projects" style={{ maxWidth: "40rem" }}>
+          <Link
+            target="blank"
+            href="https://teddy-afro-songs-ranking.vercel.app"
+          >
+            <img
+              src="/projects/teddy-afro-songs-ranking.webp"
+              alt="Teddy Afro Songs Ranking"
+              style={{ width: "100%" }}
+            />
+          </Link>
+          <figcaption>Teddy Afro Songs Ranking</figcaption>
+        </figure>
       </div>
     </section>
   );
