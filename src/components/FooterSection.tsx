@@ -19,7 +19,8 @@ export default function FooterSection() {
 
         </Link>
         <Link
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          // href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://youtu.be/ztUt0HLY4jA?t=10"
           target="_blank"
         >
           <img id="rick_roll_icon" src="/socials/youtube.png" alt="youtube" />
