@@ -1,19 +1,37 @@
+'use client';
 import Link from "next/link";
 import {
   FigmaIcon,
-  CssIcon,
-  TypescriptIcon,
 } from "./ToolIcons";
+import { projectsData } from "@/db/Projects";
+import { useEffect } from "react";
 
 export default function ProjectsSection() {
+
+  useEffect(() => {
+    document.body.style.setProperty(
+      'timeline-scope',
+      projectsData.map(proj => `--tl-${proj.id}`).join(", ")
+    );
+  }, [])
+
+  const projectDescriptionElements = projectsData.map((proj, i) => (
+    <div id={proj.id} key={proj.id} className="mobile_projects_container" style={{ viewTimeline: `--tl-${proj.id}` }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "fit-content", gap: "1rem" }}>
+        <Link href={`#${projectsData[i - 1]?.id}`} style={{ color: "var(--text-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold" }}>{'<'}</Link>
+        <h1>{proj.title}</h1>
+        <Link href={`#${projectsData[i + 1]?.id}`} style={{ color: "var(--text-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold" }}>{'>'}</Link>
+      </div>
+      <p style={{ maxWidth: "40rem" }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem eius? Blanditiis nihil eos, nulla nesciunt perspiciatis ipsum vel odio animi? Officia fugiat ab, ut consequatur nesciunt distinctio hic quas.
+      </p>
+    </div>))
   return (
     <section
       id="projects"
       className="fullscreen"
-      style={{ marginBottom: "10rem" }}
     >
       <h1>Projects</h1>
-      {/* Mobile */}
       <h3>
         <span>Mobile Designs</span>
       </h3>
@@ -24,6 +42,16 @@ export default function ProjectsSection() {
         </span>{" "}
         powered responsive designs with creativity 🪄 and interactivity 💯
       </p>
+      {projectDescriptionElements}
+      <div style={{ height: "100svh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <h1 style={{ textAlign: "center", fontSize: "25svw" }}>NuuX</h1>
+      </div>
+
+
+
+
+
+      {/*
 
       <div className="mobile_projects_container">
         <figure className="mobile_projects">
@@ -75,7 +103,7 @@ export default function ProjectsSection() {
           <figcaption>Erf Rooms</figcaption>
         </figure>
       </div>
-      {/* Web */}
+
       <h3 style={{ marginTop: "10rem" }}>
         <span>Web Design & Dev</span>
       </h3>
@@ -177,7 +205,7 @@ export default function ProjectsSection() {
           </Link>
           <figcaption>Teddy Afro Songs Ranking</figcaption>
         </figure>
-      </div>
+      </div> */}
     </section>
   );
 }

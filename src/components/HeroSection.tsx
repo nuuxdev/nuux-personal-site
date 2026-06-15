@@ -7,7 +7,31 @@ import {
   VueIcon,
 } from "./ToolIcons";
 
+import { projectsData } from "@/db/Projects";
+
 export default function HeroSection() {
+
+  const ProjectElements = projectsData.map((proj) => (
+    <foreignObject
+      key={proj.id}
+      className="proj_on_path_container"
+      style={{ animationTimeline: `--tl-${proj.id}` }}
+    >
+      <figure
+        className={`proj_on_path ${proj.platform}`}
+      >
+        <Link
+          target="blank"
+          href={proj.href}
+        >
+          <img
+            src={proj.imageSrc}
+            alt={proj.imageAlt}
+          />
+        </Link>
+      </figure>
+    </foreignObject>
+  ))
   return (
     <section className="hero_section breakout">
       <h1>
@@ -36,14 +60,15 @@ export default function HeroSection() {
         <CssIcon />
         <TypescriptIcon />
       </div>
-      <Link href="#projects" style={{ alignSelf: "center" }}>
+      <Link href={`#${projectsData[0].id}`} style={{ alignSelf: "center" }}>
         <button tabIndex={-1}>
           Straight to my projects <span className="button_icon_emoji">⛷️</span>
         </button>
       </Link>
       <svg
         className="hero_svg"
-        viewBox="0 0 428 120"
+        // viewBox="0 0 428 120"
+        viewBox="-50 -50 528 220"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -55,6 +80,7 @@ export default function HeroSection() {
         </defs>
 
         <path
+          id="proj_path"
           d="M1.5 1L50.2294 85.4018C75.7088 129.533 139.407 129.533 164.887 85.4017L168.448 79.2333C188.523 44.4629 238.709 44.463 258.784 79.2333L262.345 85.4018C287.825 129.533 351.523 129.533 377.003 85.4017L425.732 1"
           stroke="url(#gradientStroke)"
         />
@@ -62,7 +88,8 @@ export default function HeroSection() {
           className="offset_path"
           d="M1.5 1L50.2294 85.4018C75.7088 129.533 139.407 129.533 164.887 85.4017L168.448 79.2333C188.523 44.4629 238.709 44.463 258.784 79.2333L262.345 85.4018C287.825 129.533 351.523 129.533 377.003 85.4017L425.732 1"
         />
+        {ProjectElements}
       </svg>
-    </section>
+    </section >
   );
 }
