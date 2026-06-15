@@ -233,8 +233,13 @@ main {
 .hero_svg {
   position: fixed;
   left: 50%;
-  bottom: -10%;
   transform: translateX(-50%);
+  bottom: -10%;
+
+  @media (max-width: 600px) {
+    bottom: 25%;
+  }
+
   width: max(220%, 1600px);
   rotate: -10deg;
   aspect-ratio: 428/120;
@@ -291,10 +296,18 @@ main {
 
       &.web {
         scale: var(--img-scale);
+
+        @media (max-width: 600px) {
+          scale: calc(var(--img-scale) * 1.5);
+        }
       }
 
       &.mobile {
-        scale: calc(var(--img-scale) * 1.5);
+        scale: calc(var(--img-scale) * 2);
+
+        @media (max-width: 600px) {
+          scale: calc(var(--img-scale) * 3);
+        }
       }
 
       /* animation: scale_in_out 20s linear;
