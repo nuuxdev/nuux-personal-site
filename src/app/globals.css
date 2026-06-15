@@ -436,7 +436,7 @@ section#projects {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   overflow-x: hidden;
   height: 100svh;
   flex-direction: column;
