@@ -18,9 +18,9 @@ export default function ProjectsSection() {
   const projectDescriptionElements = projectsData.map((proj, i) => (
     <div id={proj.id} key={proj.id} className="mobile_projects_container" style={{ viewTimeline: `--tl-${proj.id}` }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "fit-content", gap: "1rem" }}>
-        <Link href={`#${projectsData[i - 1]?.id}`} style={{ color: "var(--text-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold" }}>{'<'}</Link>
+        <Link href={`#${projectsData[i - 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'<'}</Link>
         <h1>{proj.title}</h1>
-        <Link href={`#${projectsData[i + 1]?.id}`} style={{ color: "var(--text-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold" }}>{'>'}</Link>
+        <Link href={`#${projectsData[i + 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'>'}</Link>
       </div>
       <p style={{ maxWidth: "40rem" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem eius? Blanditiis nihil eos, nulla nesciunt perspiciatis ipsum vel odio animi? Officia fugiat ab, ut consequatur nesciunt distinctio hic quas.
@@ -44,7 +44,7 @@ export default function ProjectsSection() {
       </p>
       {projectDescriptionElements}
       <div style={{ height: "100svh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <h1 style={{ textAlign: "center", fontSize: "25svw" }}>NuuX</h1>
+        <h1 style={{ textAlign: "center", fontSize: "25svw", textShadow: "0 0 10px var(--primary-color)", WebkitTextFillColor: "var(--background)", zIndex: "-2" }}>NuuX</h1>
       </div>
 
 
