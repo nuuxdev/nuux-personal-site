@@ -17,10 +17,13 @@ export default function ProjectsSection() {
 
   const projectDescriptionElements = projectsData.map((proj, i) => (
     <div id={proj.id} key={proj.id} className="mobile_projects_container" style={{ viewTimeline: `--tl-${proj.id}` }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "fit-content", gap: "1rem" }}>
-        <Link href={`#${projectsData[i - 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'<'}</Link>
-        <h1>{proj.title}</h1>
-        <Link href={`#${projectsData[i + 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'>'}</Link>
+      <div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "fit-content", gap: "1rem" }}>
+          <Link href={`#${projectsData[i - 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'<'}</Link>
+          <h1>{proj.title}</h1>
+          <Link href={`#${projectsData[i + 1]?.id}`} style={{ color: "var(--primary-color)", textDecoration: "none", fontSize: "2rem", fontWeight: "bold", paddingInline: "0.75rem" }}>{'>'}</Link>
+        </div>
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>{proj.tags.map((tag, i) => <span key={i} style={{ padding: "0.25rem 0.5rem", borderRadius: "0.5rem", backgroundColor: "color-mix(var(--primary-color), transparent 80%)" }}>{tag}</span>)}</div>
       </div>
       <p style={{ maxWidth: "40rem" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem eius? Blanditiis nihil eos, nulla nesciunt perspiciatis ipsum vel odio animi? Officia fugiat ab, ut consequatur nesciunt distinctio hic quas.

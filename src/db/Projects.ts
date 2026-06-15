@@ -5,25 +5,28 @@ export interface Project {
     imageSrc: string;
     imageAlt: string;
     platform: 'mobile' | 'web';
+    tags: string[];
 }
 
 export const projectsData: Project[] = [
     // --- Mobile Projects ---
     {
         id: 'nova-erp',
-        title: 'ERP',
+        title: 'Nexa ERP',
         href: 'https://www.figma.com/proto/fSVsJ4bl3cZqLMtfOG91Fc/Nova?t=3QU6AZidDnbUKNbI-1&scaling=scale-down&content-scaling=responsive&page-id=0%3A1&node-id=6-964&starting-point-node-id=6%3A964&show-proto-sidebar=1',
         imageSrc: '/projects/nova-erp-one.webp',
         imageAlt: 'Nova ERP',
         platform: 'mobile',
+        tags: ['UI/UX', 'App', 'Finance'],
     },
     {
-        id: 'nova-expense',
-        title: 'Expense Tracker',
+        id: 'vita-board',
+        title: 'Vita Board',
         href: 'https://www.figma.com/proto/iEyNQK94pVTOPIPGRRQ67x/Nova-Tracker?t=sPw1Dgs5bXHGY6G4-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=22-885&starting-point-node-id=22%3A885&show-proto-sidebar=1',
         imageSrc: '/projects/nova-expense-one.webp',
-        imageAlt: 'Nova Expense Tracker',
+        imageAlt: 'Vita Board Expense Tracker',
         platform: 'mobile',
+        tags: ['UI/UX', 'App', 'Finance']
     },
     {
         id: 'bete-nibab',
@@ -32,6 +35,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/beete-nibab.webp',
         imageAlt: 'Bete Nibab',
         platform: 'mobile',
+        tags: ['UI/UX', 'character design', 'App', 'Learning']
     },
     {
         id: 'crib-crm',
@@ -40,6 +44,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/crib-crm.webp',
         imageAlt: 'Crib CRM',
         platform: 'mobile',
+        tags: ['UI/UX', 'App', 'Fintech']
     },
     {
         id: 'erf-rooms',
@@ -48,6 +53,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/erf-rooms.webp',
         imageAlt: 'Erf Rooms',
         platform: 'mobile',
+        tags: ['UI/UX', 'App', 'Hospitality']
     },
 
     // --- Web Projects ---
@@ -58,6 +64,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/redicol-trading.webp',
         imageAlt: 'Redicol Trading Website',
         platform: 'web',
+        tags: ['UI/UX', 'DEV', 'website', 'Food']
     },
     {
         id: 'neros-school',
@@ -66,6 +73,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/neros-school.webp',
         imageAlt: 'Neros School Website',
         platform: 'web',
+        tags: ['UI/UX', 'DEV', 'website', 'Learning']
     },
     {
         id: 'dr-emebet-dental',
@@ -74,6 +82,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/dr-emebet-dental.webp',
         imageAlt: 'Dr.Emebet Dental System Design',
         platform: 'web',
+        tags: ['UI/UX', 'System Design', 'Health']
     },
     {
         id: 'rome-spa',
@@ -82,6 +91,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/rome-spa.webp',
         imageAlt: 'Rome Beauty Spa System Design',
         platform: 'web',
+        tags: ['UI/UX', 'System Design', 'Hospitality']
     },
     {
         id: 'emamaye-daycare',
@@ -90,6 +100,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/emamaye-daycare.webp',
         imageAlt: 'Emamaye Daycare Management System',
         platform: 'web',
+        tags: ['UI/UX', 'DEV', 'SaaS', 'Business']
     },
     {
         id: 'wedding-invitation',
@@ -98,6 +109,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/wedding-invitation.webp',
         imageAlt: 'Wedding Invitation and Management App',
         platform: 'web',
+        tags: ['UI/UX', 'DEV', 'SaaS', 'event']
     },
     {
         id: 'teddy-afro-ranking',
@@ -106,5 +118,6 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/teddy-afro-songs-ranking.webp',
         imageAlt: 'Teddy Afro Songs Ranking',
         platform: 'web',
+        tags: ['UI/UX', 'DEV', 'Personal', 'Entertainment']
     },
 ];
