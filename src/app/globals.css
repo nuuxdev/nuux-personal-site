@@ -242,7 +242,7 @@ main {
   filter: drop-shadow(0 -0.75rem 0.5rem var(--primary-color));
 
   @media (max-width: 600px) {
-    bottom: 25%;
+    bottom: 10%;
   }
 
   path {
