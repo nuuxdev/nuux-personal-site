@@ -436,7 +436,7 @@ section#projects {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
   overflow-x: hidden;
   height: 100vh;
   flex-direction: column;
@@ -449,6 +449,7 @@ section#projects {
     gap: 0rem;
     justify-content: start;
     font-size: 0.75rem;
+    padding: 3.5rem 2rem;
   }
 
   --webkit-mask: linear-gradient(transparent, white);
