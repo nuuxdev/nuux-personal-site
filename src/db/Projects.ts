@@ -6,6 +6,7 @@ export interface Project {
     imageAlt: string;
     platform: 'mobile' | 'web';
     tags: string[];
+    description: string
 }
 
 export const projectsData: Project[] = [
@@ -18,6 +19,7 @@ export const projectsData: Project[] = [
         imageAlt: 'Nova ERP',
         platform: 'mobile',
         tags: ['UI/UX', 'App', 'Finance'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'vita-board',
@@ -26,7 +28,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/nova-expense-one.webp',
         imageAlt: 'Vita Board Expense Tracker',
         platform: 'mobile',
-        tags: ['UI/UX', 'App', 'Finance']
+        tags: ['UI/UX', 'App', 'Finance'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'bete-nibab',
@@ -35,7 +38,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/beete-nibab.webp',
         imageAlt: 'Bete Nibab',
         platform: 'mobile',
-        tags: ['UI/UX', 'character design', 'App', 'Learning']
+        tags: ['UI/UX', 'character design', 'App', 'Learning'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'crib-crm',
@@ -44,7 +48,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/crib-crm.webp',
         imageAlt: 'Crib CRM',
         platform: 'mobile',
-        tags: ['UI/UX', 'App', 'Fintech']
+        tags: ['UI/UX', 'App', 'Fintech'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'erf-rooms',
@@ -53,7 +58,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/erf-rooms.webp',
         imageAlt: 'Erf Rooms',
         platform: 'mobile',
-        tags: ['UI/UX', 'App', 'Hospitality']
+        tags: ['UI/UX', 'App', 'Hospitality'],
+        description: "...........................................Description Coming Soon..........................................."
     },
 
     // --- Web Projects ---
@@ -64,7 +70,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/redicol-trading.webp',
         imageAlt: 'Redicol Trading Website',
         platform: 'web',
-        tags: ['UI/UX', 'DEV', 'website', 'Food']
+        tags: ['UI/UX', 'DEV', 'website', 'Food'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'neros-school',
@@ -73,7 +80,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/neros-school.webp',
         imageAlt: 'Neros School Website',
         platform: 'web',
-        tags: ['UI/UX', 'DEV', 'website', 'Learning']
+        tags: ['UI/UX', 'DEV', 'website', 'Learning'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'dr-emebet-dental',
@@ -82,7 +90,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/dr-emebet-dental.webp',
         imageAlt: 'Dr.Emebet Dental System Design',
         platform: 'web',
-        tags: ['UI/UX', 'System Design', 'Health']
+        tags: ['UI/UX', 'System Design', 'Health'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'rome-spa',
@@ -91,7 +100,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/rome-spa.webp',
         imageAlt: 'Rome Beauty Spa System Design',
         platform: 'web',
-        tags: ['UI/UX', 'System Design', 'Hospitality']
+        tags: ['UI/UX', 'System Design', 'Hospitality'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'emamaye-daycare',
@@ -100,7 +110,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/emamaye-daycare.webp',
         imageAlt: 'Emamaye Daycare Management System',
         platform: 'web',
-        tags: ['UI/UX', 'DEV', 'SaaS', 'Business']
+        tags: ['UI/UX', 'DEV', 'SaaS', 'Business'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'wedding-invitation',
@@ -109,7 +120,8 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/wedding-invitation.webp',
         imageAlt: 'Wedding Invitation and Management App',
         platform: 'web',
-        tags: ['UI/UX', 'DEV', 'SaaS', 'event']
+        tags: ['UI/UX', 'DEV', 'SaaS', 'event'],
+        description: "...........................................Description Coming Soon..........................................."
     },
     {
         id: 'teddy-afro-ranking',
@@ -118,6 +130,7 @@ export const projectsData: Project[] = [
         imageSrc: '/projects/teddy-afro-songs-ranking.webp',
         imageAlt: 'Teddy Afro Songs Ranking',
         platform: 'web',
-        tags: ['UI/UX', 'DEV', 'Personal', 'Entertainment']
+        tags: ['UI/UX', 'DEV', 'Personal', 'Entertainment'],
+        description: "...........................................Description Coming Soon..........................................."
     },
 ];

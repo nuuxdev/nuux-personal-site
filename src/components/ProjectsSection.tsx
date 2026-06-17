@@ -26,7 +26,7 @@ export default function ProjectsSection() {
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>{proj.tags.map((tag, i) => <span key={i} style={{ padding: "0.25rem 0.5rem", borderRadius: "0.5rem", backgroundColor: "color-mix(var(--primary-color), transparent 80%)" }}>{tag}</span>)}</div>
       </div>
       <p style={{ maxWidth: "40rem" }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatem eius? Blanditiis nihil eos, nulla nesciunt perspiciatis ipsum vel odio animi? Officia fugiat ab, ut consequatur nesciunt distinctio hic quas.
+        {proj.description}
       </p>
     </div>))
   return (
